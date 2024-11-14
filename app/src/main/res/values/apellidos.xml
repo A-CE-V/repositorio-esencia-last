@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--  Apellidos Elegidos por Daniel   -->
-    <string name="alicia">Calderon Tazon</string>
-    <string name="rosa">Menendez Lopez</string>
-    <string name="montserrat">Calleja Gomez</string>
-    <string name="maria">Blasco Marhuenda</string>
-    <string name="margarita">Salas Falguera</string>
+    <string name="a_alicia">Calderon Tazon</string>
+    <string name="a_rosa">Menendez Lopez</string>
+    <string name="a_montserrat">Calleja Gomez</string>
+    <string name="a_maria">Blasco Marhuenda</string>
+    <string name="a_margarita">Salas Falguera</string>
 
     <!--  Apellidos Elegidos por Salvador   -->
-    <string name="marie">Curie</string>
-    <string name="barbara">McClintock</string>
-    <string name="elizabeth">Blackburn</string>
-    <string name="rosalind">Franklin</string>
-    <string name="caroline">Herschel</string>
+    <string name="a_marie">Curie</string>
+    <string name="a_barbara">McClintock</string>
+    <string name="a_elizabeth">Blackburn</string>
+    <string name="a_rosalind">Franklin</string>
+    <string name="a_caroline">Herschel</string>
 
     <!--  Apellidos Elegidos por Yaris   -->
-    <string name="aspasia">de Mileto</string>
-    <string name="mary">Anning</string>
-    <string name="ada">Lovelance</string>
-    <string name="nettie">Stevans</string>
-    <string name="lise">Meitner</string>
+    <string name="a_aspasia">de Mileto</string>
+    <string name="a_mary">Anning</string>
+    <string name="a_ada">Lovelance</string>
+    <string name="a_nettie">Stevans</string>
+    <string name="a_lise">Meitner</string>
 
     <!--  Apellidos Elegidos por Adrián   -->
-    <string name="maria_juana">Andresa Casamayor</string>
-    <string name="blanca">Catalán</string>
-    <string name="valentina">Tereshkova</string>
-    <string name="hipatia">N/A</string>
-    <string name="sofia">Kovalévskaya</string>
+    <string name="a_maria_juana">Andresa Casamayor</string>
+    <string name="a_blanca">Catalán</string>
+    <string name="a_valentina">Tereshkova</string>
+    <string name="a_hipatia">N/A</string>
+    <string name="a_sofia">Kovalévskaya</string>
 
 
 </resources>

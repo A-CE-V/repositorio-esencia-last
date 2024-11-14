@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--  Fechas Elegidos por Daniel   -->
-    <string name="alicia">--/--/1982 - Presente</string>
-    <string name="rosa">12/02/1956 - Presente</string>
-    <string name="montserrat">22/04/1973 - Presente</string>
-    <string name="maria">--/--/1965 - Presente</string>
-    <string name="margarita">30/11/1938 – 07/11/2019</string>
+    <string name="f_alicia">--/--/1982 - Presente</string>
+    <string name="f_rosa">12/02/1956 - Presente</string>
+    <string name="f_montserrat">22/04/1973 - Presente</string>
+    <string name="f_maria">--/--/1965 - Presente</string>
+    <string name="f_margarita">30/11/1938 – 07/11/2019</string>
 
     <!--  Fechas Elegidos por Salvador   -->
-    <string name="marie">7 de noviembre de 1867 – 4 de julio de 1934</string>
-    <string name="barbara">16 de junio de 1902 – 3 de septiembre de 1992 </string>
-    <string name="elizabeth">16 de junio de 1902 – 3 de septiembre de 1992 </string>
-    <string name="rosalind">25 de julio de 1920 – 16 de abril de 1958</string>
-    <string name="caroline">16 de marzo de 1751 – 9 de enero de 1848</string>
+    <string name="f_marie">7 de noviembre de 1867 – 4 de julio de 1934</string>
+    <string name="f_barbara">16 de junio de 1902 – 3 de septiembre de 1992 </string>
+    <string name="f_elizabeth">16 de junio de 1902 – 3 de septiembre de 1992 </string>
+    <string name="f_rosalind">25 de julio de 1920 – 16 de abril de 1958</string>
+    <string name="f_caroline">16 de marzo de 1751 – 9 de enero de 1848</string>
 
     <!--  Fechas Elegidos por Yaris   -->
-    <string name="aspasia">470 a.C. – 400 a.C.</string>
-    <string name="mary">21 de mayo de 1799 – 9 de marzo de 1847 </string>
-    <string name="ada">10 de diciembre de 1815, 27 de noviembre de 1852 </string>
-    <string name="nettie">7 de julio de 1861 – 4 de mayo de 1912</string>
-    <string name="lise">7 de noviembre de 1878 – 27 de octubre de 1968</string>
+    <string name="f_aspasia">470 a.C. – 400 a.C.</string>
+    <string name="f_mary">21 de mayo de 1799 – 9 de marzo de 1847 </string>
+    <string name="f_ada">10 de diciembre de 1815, 27 de noviembre de 1852 </string>
+    <string name="f_nettie">7 de julio de 1861 – 4 de mayo de 1912</string>
+    <string name="f_lise">7 de noviembre de 1878 – 27 de octubre de 1968</string>
 
     <!--  Fechas Elegidos por Adrián   -->
-    <string name="maria_juana">30 de noviembre de 1720 – 23 de octubre de 1780</string>
-    <string name="blanca">22 de agosto de 1860 – 17 de marzo de 1904</string>
-    <string name="valentina">6 de marzo de 1937 - Presente</string>
-    <string name="hipatia">355a.C - 415a.C</string>
-    <string name="sofia">15 de enero de 1850 – 10 de febrero de 1891</string>
+    <string name="f_maria_juana">30 de noviembre de 1720 – 23 de octubre de 1780</string>
+    <string name="f_blanca">22 de agosto de 1860 – 17 de marzo de 1904</string>
+    <string name="f_valentina">6 de marzo de 1937 - Presente</string>
+    <string name="f_hipatia">355a.C - 415a.C</string>
+    <string name="f_sofia">15 de enero de 1850 – 10 de febrero de 1891</string>
 
 </resources>
