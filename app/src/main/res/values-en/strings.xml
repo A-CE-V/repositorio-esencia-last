@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ESENCIA PROJECT</string>
+    <string name="app_name">STEM BOOK</string>
     <string name="text_bienvenida">¡ Welcome, press the button to begin !</string>
     <string name="btn_bienvendia_text">Start</string>
 </resources>

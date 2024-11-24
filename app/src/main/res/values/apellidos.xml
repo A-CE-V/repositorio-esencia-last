@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--  Apellidos Elegidos por Daniel   -->
-    <string name="a_alicia">Calderon Tazon</string>
-    <string name="a_rosa">Menendez Lopez</string>
-    <string name="a_montserrat">Calleja Gomez</string>
-    <string name="a_maria">Blasco Marhuenda</string>
-    <string name="a_margarita">Salas Falguera</string>
+    <string name="a_alicia" translatable="false">Calderon Tazon</string>
+    <string name="a_rosa" translatable="false">Menendez Lopez</string>
+    <string name="a_montserrat" translatable="false">Calleja Gomez</string>
+    <string name="a_maria" translatable="false">Blasco Marhuenda</string>
+    <string name="a_margarita" translatable="false">Salas Falguera</string>
 
     <!--  Apellidos Elegidos por Salvador   -->
-    <string name="a_marie">Curie</string>
-    <string name="a_barbara">McClintock</string>
-    <string name="a_elizabeth">Blackburn</string>
-    <string name="a_rosalind">Franklin</string>
-    <string name="a_caroline">Herschel</string>
+    <string name="a_marie" translatable="false">Curie</string>
+    <string name="a_barbara" translatable="false">McClintock</string>
+    <string name="a_elizabeth" translatable="false">Blackburn</string>
+    <string name="a_rosalind" translatable="false">Franklin</string>
+    <string name="a_caroline" translatable="false">Herschel</string>
 
     <!--  Apellidos Elegidos por Yaris   -->
-    <string name="a_aspasia">de Mileto</string>
-    <string name="a_mary">Anning</string>
-    <string name="a_ada">Lovelance</string>
-    <string name="a_nettie">Stevans</string>
-    <string name="a_lise">Meitner</string>
+    <string name="a_aspasia" translatable="false">de Mileto</string>
+    <string name="a_mary" translatable="false">Anning</string>
+    <string name="a_ada" translatable="false">Lovelance</string>
+    <string name="a_nettie" translatable="false">Stevans</string>
+    <string name="a_lise" translatable="false">Meitner</string>
 
     <!--  Apellidos Elegidos por Adrián   -->
-    <string name="a_maria_juana">Andresa Casamayor</string>
-    <string name="a_blanca">Catalán</string>
-    <string name="a_valentina">Tereshkova</string>
-    <string name="a_hipatia">N/A</string>
-    <string name="a_sofia">Kovalévskaya</string>
+    <string name="a_maria_juana" translatable="false">Andresa Casamayor</string>
+    <string name="a_blanca" translatable="false">Catalán</string>
+    <string name="a_valentina" translatable="false">Tereshkova</string>
+    <string name="a_hipatia" translatable="false">N/A</string>
+    <string name="a_sofia" translatable="false">Kovalévskaya</string>
 
 
 </resources>

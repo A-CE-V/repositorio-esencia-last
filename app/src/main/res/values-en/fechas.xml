@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Fechas Elegidos por Daniel   -->
+    <string name="f_alicia">1982 - Present</string>
+    <string name="f_rosa">12 february 1956 - Present</string>
+    <string name="f_montserrat">22 april 1973 - Present</string>
+    <string name="f_maria">1965 - Present</string>
+    <string name="f_margarita">30 october 1938 – 07 october 2019</string>
+
+    <!--  Fechas Elegidos por Salvador   -->
+    <string name="f_marie">7th november of 1867 – 4 july 1934</string>
+    <string name="f_barbara" >16 june 1902 – 3 september 1992 </string>
+    <string name="f_elizabeth">16 june 1902 – 3 september 1992 </string>
+    <string name="f_rosalind">25 july 1920 – 16 abril 1958</string>
+    <string name="f_caroline">16 de marzo de 1751 – 9 de enero de 1848</string>
+
+    <!--  Fechas Elegidos por Yaris   -->
+    <string name="f_aspasia">470 a.C. – 400 a.C.</string>
+    <string name="f_mary">21 de mayo de 1799 – 9 de marzo de 1847 </string>
+    <string name="f_ada">10 de diciembre de 1815 - 27 de noviembre de 1852 </string>
+    <string name="f_nettie">7 de july de 1861 – 4 de mayo de 1912</string>
+    <string name="f_lise">7 de november de 1878 – 27 de october de 1968</string>
+
+    <!--  Fechas Elegidos por Adrián   -->
+    <string name="f_maria_juana">30 de november de 1720 – 23 de october de 1780</string>
+    <string name="f_blanca">22 august 1860 – 17 marzo 1904</string>
+    <string name="f_valentina">6 marzo 1937 - Present</string>
+    <string name="f_hipatia">355a.C - 415a.C</string>
+    <string name="f_sofia">15 de enero de 1850 – 10 de febrero de 1891</string>
+
+</resources>

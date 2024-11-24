@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Proyecto ESENCIA</string>
+    <string name="app_name">STEM BOOK</string>
     <string name="text_bienvenida">¡ Bienvenido, pulsa el botón para comenzar !</string>
     <string name="btn_bienvendia_text">Empezar</string>
 </resources>

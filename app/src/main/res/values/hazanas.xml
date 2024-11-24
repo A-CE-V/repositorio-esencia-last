@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!--- Hazañas de Daniel -->
-    <string name="h_alicia"> Descubrió el bosón de Higgs, una esquiva partícula cuya existencia se propuso y se describió en los años 60 pero que los científicos tardaron casi medio siglo en encontrar y así en confirmar su existencia </string>
-    <string name="h_rosa"> Fue la primera mujer presidenta del Consejo Superior de Investigaciones Científicas (CSIC) desde que se creó en 1939 </string>
-    <string name="h_montserrat"> Ha propuesto y desarrollado con éxito conceptos disruptivos en la frontera entre la física y la biología, como la identificación de marcadores biofísicos para comprender la mecanobiología del cáncer y para la detección de organismos patógenos </string>
-    <string name="h_maria"> Identificó el gen esencial de la telomerasa y generó el primer modelo de ratón deficiente en telomerasa, que sirvió para demostrar la importancia de la telomerasa en el mantenimiento de los telómeros, en la inestabilidad cromosómica y en la enfermedad. </string>
-
-</resources>

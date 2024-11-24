@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--  Nombres Elegidos por Daniel   -->
-    <string name="alicia">Alicia</string>
-    <string name="rosa">Rosa</string>
-    <string name="montserrat">Montserrat</string>
-    <string name="maria">Maria</string>
-    <string name="margarita">Margarita</string>
+    <string name="alicia" translatable="false">Alicia</string>
+    <string name="rosa" translatable="false" >Rosa</string>
+    <string name="montserrat" translatable="false">Montserrat</string>
+    <string name="maria" translatable="false">Maria</string>
+    <string name="margarita" translatable="false">Margarita</string>
 
     <!--  Nombres Elegidos por Salvador   -->
-    <string name="marie">Marie</string>
-    <string name="barbara">Barbara</string>
-    <string name="elizabeth">Elizabeth</string>
-    <string name="rosalind">Rosalind</string>
-    <string name="caroline">Caroliñe</string>
+    <string name="marie" translatable="false">Marie</string>
+    <string name="barbara" translatable="false">Barbara</string>
+    <string name="elizabeth" translatable="false">Elizabeth</string>
+    <string name="rosalind" translatable="false">Rosalind</string>
+    <string name="caroline" translatable="false">Caroliñe</string>
 
     <!--  Nombres Elegidos por Yaris   -->
-    <string name="aspasia">Aspasia</string>
-    <string name="mary">Mary</string>
-    <string name="ada">Ada</string>
-    <string name="nettie">Nettie</string>
-    <string name="lise">Lise</string>
+    <string name="aspasia" translatable="false">Aspasia</string>
+    <string name="mary" translatable="false">Mary</string>
+    <string name="ada" translatable="false">Ada</string>
+    <string name="nettie" translatable="false">Nettie</string>
+    <string name="lise" translatable="false">Lise</string>
 
     <!--  Nombres Elegidos por Adrián   -->
-    <string name="maria_juana">María Juana</string>
-    <string name="blanca">Blanca</string>
-    <string name="valentina">Valentina</string>
-    <string name="hipatia">Hipatía</string>
-    <string name="sofia">Sofia</string>
+    <string name="maria_juana" translatable="false">María Juana</string>
+    <string name="blanca" translatable="false">Blanca</string>
+    <string name="valentina" translatable="false">Valentina</string>
+    <string name="hipatia" translatable="false">Hipatía</string>
+    <string name="sofia" translatable="false">Sofia</string>
 
 
 </resources>

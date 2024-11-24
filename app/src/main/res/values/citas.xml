@@ -2,6 +2,10 @@
 <resources>
     <!--  Citas Elegidos por Daniel   -->
     <string name="c_margarita">Lo importante es no tener arrugas en el cerebro</string>
+    <string name="c_alicia" ></string>
+    <string name="c_rosa"> </string>
+    <string name="c_montserrat">  </string>
+    <string name="c_maria"></string>
 
     <!--  Citas Elegidos por Salvador   -->
     <string name="c_marie">La mejor vida no es la más larga, sino la más rica en buenas acciones.</string>
