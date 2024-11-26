@@ -1,8 +1,16 @@
-CHANGELOG:
+___________ ____________________ _______  _________ .___   _____         
+\_   _____//   _____/\_   _____/ \      \ \_   ___ \|   | /  _  \        
+ |    __)_ \_____  \  |    __)_  /   |   \/    \  \/|   |/  /_\  \       
+ |        \/        \ |        \/    |    \     \___|   /    |    \      
+/_______  /_______  //_______  /\____|__  /\______  /___\____|__  /      
+        \/        \/         \/         \/        \/            \/       
+____________________ ________        ____._______________________________
+\______   \______   \\_____  \      |    |\_   _____/\_   ___ \__    ___/
+ |     ___/|       _/ /   |   \     |    | |    __)_ /    \  \/ |    |   
+ |    |    |    |   \/    |    \/\__|    | |        \\     \____|    |   
+ |____|    |____|_  /\_______  /\________|/_______  / \______  /|____|   
+                  \/         \/                   \/         \/          
 
-Versión 0.0.3:
-- Modificaciones varias en: app/src/main/res/values
-- Adición de README.md
-- Adición de los XML; nombre, apellido, citas, fechas y hazanas
-- Adición de versión del XML strings para el idioma inglés
-- Adición y creación de ramas del proyecto
+                Versión Actual: 0.0.7 - SNAPSHOT
+                Rama publicada actualmente: Master
+                
