@@ -75,6 +75,25 @@ class AsociacionDatos {
 
 
     public val imagenesData = listOf(
+        // Imágenes de Daniel, añadidas por Adrián:
+        R.drawable.alicia to R.string.alicia,
+        R.drawable.rosa to R.string.rosa,
+        R.drawable.montserrat to R.string.montserrat,
+        R.drawable.maria to R.string.maria,
+        R.drawable.margarita to R.string.margarita,
+        // Imágenes de Salvador, añadidas por Adrián:
+        R.drawable.marie to R.string.marie,
+        R.drawable.barbara to R.string.barbara,
+        R.drawable.elizabeth to R.string.elizabeth,
+        R.drawable.rosalind to R.string.rosalind,
+        R.drawable.caroline to R.string.caroline,
+        // Imágenes de Yaris, añadidas por Adrián:
+        R.drawable.aspasia to R.string.aspasia,
+        R.drawable.mary to R.string.mary,
+        R.drawable.ada to R.string.ada,
+        R.drawable.nettie to R.string.nettie,
+        R.drawable.lise to R.string.lise,
+        // Imágenes de Adrián, añadidas por Adrián:
         R.drawable.mariaandresa to R.string.maria_juana,
         R.drawable.blanca to R.string.blanca,
         R.drawable.valentina to R.string.valentina,
@@ -97,7 +116,9 @@ class AsociacionDatos {
         if (apellido != null && fechas != null && cita != null) {
             datos.add(apellido); datos.add(fechas); datos.add(cita)
         }else{
-            datos.add(R.string.datos_null_error1)
+            repeat(3){
+                datos.add(R.string.datos_null_error1)
+            }
         }
         return datos
     }
