@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    TRADUCIR AL INGLÉS     -->
+    <string name="p_alicia">Investigadora, Física</string>
+    <string name="p_rosa">Investigadora, Química</string>
+    <string name="p_montserrat">Investigadora, Física</string>
+    <string name="p_maria">Bióloga Molecular, Actriz</string>
+    <string name="p_margarita">Investigadora, Escritora , Bioquímica, Educadora, Profesora Universitaria, Bióloga Molecular, Genetista Molecular</string>
+
+    <!--  Fechas Elegidos por Salvador   -->
+    <string name="p_marie">Física, Química, Profesora Universitaria</string>
+    <string name="p_barbara" >Química, Citogenetista, Botánica, Profesora Universitaria</string>
+    <string name="p_elizabeth">Escritora, Investigadora, Bioquímica, Profesora Univesitaria, Bióloga Molecular</string>
+    <string name="p_rosalind">Física, Bioquímica, Genetista, Profesora Universitaria, Biofísica, Bióloga Molecular</string>
+    <string name="p_caroline">Astrónoma, Matemática, Cantante</string>
+
+    <!--  Fechas Elegidos por Yaris   -->
+    <string name="p_aspasia">Filósofa, Escritora, Oradora, Trabajadora Sexual</string>
+    <string name="p_mary">Paleontóloga, comerciante</string>
+    <string name="p_ada">Matemática, Programadora, Inventora, Informática, Poetista</string>
+    <string name="p_nettie">Genetista, Bióloga, Bibliotecaria, Zoóloga</string>
+    <string name="p_lise">Física, Química, Educadora, Profesora Univesitaria</string>
+
+    <!--  Fechas Elegidos por Adrián   -->
+    <string name="p_maria_juana">Matemática, Maestra</string>
+    <string name="p_blanca">Botánica</string>
+    <string name="p_valentina">Astronauta, Política</string>
+    <string name="p_hipatia">Filósofa, Matemática, Maestra, Astrónoma, Escritora, Inventora</string>
+    <string name="p_sofia">Matemática, Física, Escritora, Profesora Universitaria</string>
+</resources>
