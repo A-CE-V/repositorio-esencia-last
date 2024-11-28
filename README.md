@@ -1,8 +1,5 @@
-CHANGELOG:
+![alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIRJZHM68b6kd3wzMV4jJCOavHdFYKqIAklw&s)
 
-Versión 0.0.3:
-- Modificaciones varias en: app/src/main/res/values
-- Adición de README.md
-- Adición de los XML; nombre, apellido, citas, fechas y hazanas
-- Adición de versión del XML strings para el idioma inglés
-- Adición y creación de ramas del proyecto
+                Versión Actual: 0.0.7 - SNAPSHOT
+                Rama publicada actualmente: Master
+                
