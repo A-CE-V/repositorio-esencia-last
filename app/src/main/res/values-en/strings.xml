@@ -2,7 +2,6 @@
 <resources>
     <string name="app_name">STEM BOOK</string>
 
-    <string name="text_bienvenida">¡ Welcome, press the button to begin !</string>
-    <string name="btn_bienvendia_text">Start</string>
-    <string name="btn_bienvenida_exit">Exit</string>
+    <string name="text_bienvenida">The application where you can find the biographies of some of the most famous women in contemporary history, press the button to start.</string>
+    <string name="btn_bienvendia_text">Tap the button to start</string>
 </resources>

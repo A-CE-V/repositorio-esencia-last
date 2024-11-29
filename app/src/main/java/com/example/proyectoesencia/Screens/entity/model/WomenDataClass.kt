@@ -1,4 +1,4 @@
-package com.example.proyectoesencia.entity
+package com.example.proyectoesencia.Screens.entity.model
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
