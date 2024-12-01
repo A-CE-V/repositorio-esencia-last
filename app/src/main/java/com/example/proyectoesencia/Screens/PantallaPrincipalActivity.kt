@@ -11,7 +11,11 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -21,7 +25,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.proyectoesencia.Screens.ScreensAssets.Recuadros
 import com.example.proyectoesencia.Screens.entity.model.Datos
-
+import androidx.compose.material3.*
 /*
 class PantallaPrincipalActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,34 +40,51 @@ class PantallaPrincipalActivity : ComponentActivity() {
 }
 */
 
+
 @Composable
-fun AppManagerPP(navController: NavController){
-    /*
-         ESTE CÓDIGO SERVIRÁ PARA IMPLEMENTAR EL TOOLBAR CREO
+fun AppManagerPP(navController: NavController) {
+    Scaffold(
+        topBar = { AppToolbar(navController) }
+    ) { paddingValues ->
+        AppMainScreenManager(modifier = Modifier.padding(paddingValues))
+    }
+}
 
-        Scaffold (
-            topBar = {  llamada a la función principal de la clase de la toolbar / topbar  }
-        ){
-
-            AppMainScreenManager()
-
-
-        }
-
-
-     */
-
-    AppMainScreenManager()
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun AppToolbar(navController: NavController) {
+    CenterAlignedTopAppBar(
+        title = { Text(text = "Esencia App") },
+        actions = {
+            IconButton(onClick = { }) {
+                Icon(
+                    imageVector = Icons.Default.Search,
+                    contentDescription = "Buscar"
+                )
+            }
+            IconButton(onClick = {
+                navController.navigate("settings")
+            }) {
+                Icon(
+                    imageVector = Icons.Default.Settings,
+                    contentDescription = "Configuración"
+                )
+            }
+        },
+        colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
+            containerColor = MaterialTheme.colorScheme.primary,
+            titleContentColor = MaterialTheme.colorScheme.onPrimary
+        )
+    )
 }
 
 @Composable
-fun AppMainScreenManager(){
-    MostrarCuadriculaReCuadros(modifier = Modifier)
-
+fun AppMainScreenManager(modifier: Modifier) {
+    MostrarCuadriculaReCuadros(modifier = modifier)
 }
 
 
-// Esta función será la que se muestre cuando el dispositivo esté en vertical
+
 @Composable
 fun MostrarCuadriculaReCuadros(modifier: Modifier){
     val listaMujeres = Datos().listaData
@@ -128,5 +149,7 @@ fun ColumnaPreview(){
 @Preview
 @Composable
 fun AppManagerPreview(){
-    AppMainScreenManager()
+    AppMainScreenManager(
+        modifier = TODO()
+    )
 }
