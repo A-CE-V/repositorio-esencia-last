@@ -54,7 +54,7 @@ fun AppManagerPP(navController: NavController) {
 @Composable
 fun AppToolbar(navController: NavController) {
     CenterAlignedTopAppBar(
-        title = { Text(text = "Esencia App") },
+        title = { Text(text = "Sprint 1") },
         actions = {
             IconButton(onClick = { }) {
                 Icon(
