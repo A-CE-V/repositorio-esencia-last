@@ -1,10 +1,18 @@
 ![alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIRJZHM68b6kd3wzMV4jJCOavHdFYKqIAklw&s)
 
-                Versión Actual: 0.0.9 - SNAPSHOT
-                Rama publicada actualmente: Master de Adrián
+                Versión Actual: 1.0.0 - SNAPSHOT
+                Rama publicada actualmente: Master Global
 
 
-  NOVEDADES:
+  NOVEDADES v.1.0.0:
+
+                Toolbar añadido
+                Diversos errores arreglados
+
+
+
+
+  NOVEDADES v.0.09:
 
                 Icono de la app añadido (seguramente tenga que cambiarse debido a las diferencias en los colores...)
                 
