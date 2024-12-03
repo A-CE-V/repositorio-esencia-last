@@ -1,11 +1,12 @@
 
 
-                Versión Actual: 1.0.0 - SNAPSHOT
-                Rama publicada actualmente: Master Global
+                Versión Actual: 1.0.1 - SNAPSHOT
+                Rama publicada actualmente: Master Global (Merge de todos los proyectos individuales)
 
-  NOVEDADES v.1.1.0  
-                Más errores arreglados
+  NOVEDADES v.1.0.0:
 
+               
+                Diversos errores arreglados x2
 
 
   NOVEDADES v.1.0.0:
