@@ -22,7 +22,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
@@ -31,9 +33,17 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.compose.ProyectoESENCIATheme
+import com.example.compose.onTertiaryContainerLight
+import com.example.compose.onTertiaryLight
+import com.example.compose.tertiaryContainerLight
+import com.example.compose.tertiaryLight
 import com.example.proyectoesencia.R
 
 /*
+
+SIN UTILIZAR
+
+
 class ButtonActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -71,6 +81,9 @@ fun AppManagerButton(navController: NavController,modifier: Modifier = Modifier)
 
 @Composable
 fun PantallaBienvenida(navController: NavController,modifier: Modifier){
+    val colorTexto = Color.White
+    val colorBackgroundBoton = tertiaryLight
+
 
     Surface(color = MaterialTheme.colorScheme.surface, modifier = Modifier.fillMaxSize().fillMaxHeight()) {
         Image(
@@ -96,20 +109,20 @@ fun PantallaBienvenida(navController: NavController,modifier: Modifier){
                 Text(
                     text = stringResource(R.string.text_bienvenida),
                     textAlign = TextAlign.Center,
-                    color = MaterialTheme.colorScheme.onPrimary,
+                    color = colorTexto,
                     modifier = Modifier
                         .padding(20.dp))
 
                 Button(
                     modifier = Modifier.fillMaxWidth().padding( horizontal = 80.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.tertiaryContainer),
+                    colors = ButtonDefaults.buttonColors(containerColor = colorBackgroundBoton),
                     onClick = {
                         navController.navigate("main")
                     }
                 ) {
                     Text(
                         text = stringResource(R.string.btn_bienvendia_text),
-                        color = MaterialTheme.colorScheme.onTertiaryContainer
+                        color = colorTexto
                     )
                 }
 

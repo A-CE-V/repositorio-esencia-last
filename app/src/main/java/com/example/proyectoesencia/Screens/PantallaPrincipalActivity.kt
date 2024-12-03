@@ -1,5 +1,6 @@
 package com.example.proyectoesencia.Screens
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -26,6 +27,9 @@ import androidx.navigation.NavController
 import com.example.proyectoesencia.Screens.ScreensAssets.Recuadros
 import com.example.proyectoesencia.Screens.entity.model.Datos
 import androidx.compose.material3.*
+import com.example.compose.surfaceLight
+import com.example.proyectoesencia.Screens.ScreensAssets.Toolbar
+
 /*
 class PantallaPrincipalActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,42 +45,17 @@ class PantallaPrincipalActivity : ComponentActivity() {
 */
 
 
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun AppManagerPP(navController: NavController) {
+
     Scaffold(
-        topBar = { AppToolbar(navController) }
-    ) { paddingValues ->
-        AppMainScreenManager(modifier = Modifier.padding(paddingValues))
+        topBar = { Toolbar().AppToolbar(navController) }
+    ) {
+        AppMainScreenManager(modifier = Modifier)
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun AppToolbar(navController: NavController) {
-    CenterAlignedTopAppBar(
-        title = { Text(text = "Sprint 1") },
-        actions = {
-            IconButton(onClick = { }) {
-                Icon(
-                    imageVector = Icons.Default.Search,
-                    contentDescription = "Buscar"
-                )
-            }
-            IconButton(onClick = {
-                navController.navigate("settings")
-            }) {
-                Icon(
-                    imageVector = Icons.Default.Settings,
-                    contentDescription = "Configuración"
-                )
-            }
-        },
-        colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-            containerColor = MaterialTheme.colorScheme.primary,
-            titleContentColor = MaterialTheme.colorScheme.onPrimary
-        )
-    )
-}
 
 @Composable
 fun AppMainScreenManager(modifier: Modifier) {
@@ -88,8 +67,9 @@ fun AppMainScreenManager(modifier: Modifier) {
 @Composable
 fun MostrarCuadriculaReCuadros(modifier: Modifier){
     val listaMujeres = Datos().listaData
+    val colorDelFondo = surfaceLight
     Surface(
-        color = MaterialTheme.colorScheme.tertiary,
+        color = colorDelFondo,
         modifier = Modifier.fillMaxSize()) {
 
         LazyVerticalGrid(
@@ -125,7 +105,12 @@ fun MostrarColumnaRectangulos(modifier: Modifier){
 
 /*
 
-    PREVIEWS DE LA PANTALLA PRINCIPAL DE LA APLICACIÓN:
+
+
+                     PREVIEWS DE LA PANTALLA PRINCIPAL DE LA APLICACIÓN:
+
+
+
 
 
  */
@@ -149,7 +134,5 @@ fun ColumnaPreview(){
 @Preview
 @Composable
 fun AppManagerPreview(){
-    AppMainScreenManager(
-        modifier = TODO()
-    )
+    AppMainScreenManager(modifier = Modifier)
 }

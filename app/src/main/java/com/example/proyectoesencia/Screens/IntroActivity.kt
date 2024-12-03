@@ -34,7 +34,11 @@ fun AppLogoIntro(navController: NavController) {
         delay(3000)
         showMyApp = false
         showMujeresStem = true
-        navController.navigate("button")
+        navController.navigate("button"){
+            popUpTo("button"){
+                inclusive = true
+            }
+        }
         showMujeresStem = false
     }
 
