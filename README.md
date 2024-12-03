@@ -3,6 +3,10 @@
                 Versión Actual: 1.0.0 - SNAPSHOT
                 Rama publicada actualmente: Master Global
 
+  NOVEDADES v.1.1.0  
+                Más errores arreglados
+
+
 
   NOVEDADES v.1.0.0:
 
