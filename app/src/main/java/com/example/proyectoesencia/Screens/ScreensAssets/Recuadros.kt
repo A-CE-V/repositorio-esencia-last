@@ -97,7 +97,7 @@ class Recuadros {
                         Text(
                             text = stringResource(nombre),
                             fontFamily = FontFamily(Font(R.font.nlight)),
-                            color = MaterialTheme.colorScheme.onPrimary,
+                            color = Color.White,
                             style = TextStyle(
                                 fontSize = 15.sp,
                                 shadow = Shadow(color = Color.Black, offset = shadowOffSet, blurRadius = 2f)
@@ -107,7 +107,7 @@ class Recuadros {
                         Text(
                             text = stringResource(apellido),
                             fontFamily = FontFamily(Font(R.font.nheavy)),
-                            color = MaterialTheme.colorScheme.onPrimary,
+                            color = Color.White,
                             style = TextStyle(
                                 fontSize = 17.sp,
                                 shadow = Shadow(color = Color.Black, offset = shadowOffSet2, blurRadius = 2f)
@@ -128,12 +128,11 @@ class Recuadros {
                     if (profesionCrop.length <= 35){
                         paddingBottom = 20.dp
                     }
-
-
+                    
                     Text(
                         text = profesionCrop,
                         fontFamily = FontFamily(Font(R.font.afacad)),
-                        color = MaterialTheme.colorScheme.onPrimary,
+                        color = Color.White,
                         style = TextStyle(
                             fontSize = 10.sp,
                             shadow = Shadow(color = Color.Black, offset = shadowOffSet2, blurRadius = 2f)
