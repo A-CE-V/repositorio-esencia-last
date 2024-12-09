@@ -1,7 +1,11 @@
 
 
-                Versión Actual: 1.0.1 - SNAPSHOT
-                Rama publicada actualmente: Master Global (Merge de todos los proyectos individuales)
+                Versión Actual: 1.1.0 - SNAPSHOT
+                
+  NOVEDADES v.1.1.0:
+
+               Ajustes pequeños para la presentación del Sprint 2
+
 
   NOVEDADES v.1.0.0:
 
