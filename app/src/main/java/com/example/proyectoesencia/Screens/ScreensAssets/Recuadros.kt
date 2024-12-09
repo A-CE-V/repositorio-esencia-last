@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.paddingFromBaseline
@@ -41,9 +42,10 @@ class Recuadros {
         val nombre = R.string.blanca
         val apellido = R.string.a_blanca
         val profesion = R.string.p_blanca
-        CrearReCuadro(imagen,nombre,apellido,profesion, modifier = Modifier)
+        RectanguloPortrait(imagen,nombre,apellido,profesion)
     }
 
+    // Sin usar
     @Preview(showBackground = false)
     @Composable
     fun CrearRectanguloPreview(){
@@ -51,15 +53,21 @@ class Recuadros {
         val nombre = R.string.blanca
         val apellido = R.string.a_blanca
         val profesion = R.string.p_blanca
-        CrearRectangulo(imagen,nombre,apellido,profesion, modifier = Modifier)
+        RectanguloLandscape(imagen,nombre,apellido,profesion)
     }
 
 
     @Composable
-    fun CrearReCuadro(@DrawableRes imagen: Int, @StringRes nombre: Int, @StringRes apellido: Int, @StringRes profesion: Int, modifier: Modifier){
+    fun RectanguloPortrait(@DrawableRes imagen: Int, @StringRes nombre: Int, @StringRes apellido: Int, @StringRes profesion: Int){
         val profesionString = stringResource(profesion); val profesionCrop: String
-        if (profesionString.length >= 60){
-            profesionCrop = "${profesionString.substring(0,60)}..."
+        //val width = 180.dp;
+        val height = 200.dp;
+        val nameSize = 23.sp; val surnameSize = 25.sp; val profesionSize = 18.sp
+        val characterCropAt = 60
+
+
+        if (profesionString.length >= characterCropAt){
+            profesionCrop = "${profesionString.substring(0,characterCropAt)}..."
         }else{
             profesionCrop = profesionString
         }
@@ -67,9 +75,9 @@ class Recuadros {
         Surface(
             shape = MaterialTheme.shapes.medium,
             color = MaterialTheme.colorScheme.primaryContainer,
-            modifier = modifier
-                .width(180.dp)
-                .height(100.dp)
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(height)
 
         ) {
             Box {
@@ -86,7 +94,7 @@ class Recuadros {
                     contentDescription = null,
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
-                        .height(60.dp)
+                        .height(height-60.dp)
                 )
                 Column(verticalArrangement = Arrangement.Bottom,
                     modifier = Modifier
@@ -99,7 +107,7 @@ class Recuadros {
                             fontFamily = FontFamily(Font(R.font.nlight)),
                             color = Color.White,
                             style = TextStyle(
-                                fontSize = 15.sp,
+                                fontSize = nameSize,
                                 shadow = Shadow(color = Color.Black, offset = shadowOffSet, blurRadius = 2f)
                             )
                         )
@@ -109,7 +117,7 @@ class Recuadros {
                             fontFamily = FontFamily(Font(R.font.nheavy)),
                             color = Color.White,
                             style = TextStyle(
-                                fontSize = 17.sp,
+                                fontSize = surnameSize,
                                 shadow = Shadow(color = Color.Black, offset = shadowOffSet2, blurRadius = 2f)
                             )
                         )
@@ -117,16 +125,16 @@ class Recuadros {
                         Text(
                             text = stringResource(nombre),
                             fontFamily = FontFamily(Font(R.font.nheavy)),
-                            color = MaterialTheme.colorScheme.onPrimary,
+                            color = Color.White,
                             style = TextStyle(
-                                fontSize = 17.sp,
+                                fontSize = nameSize,
                                 shadow = Shadow(color = Color.Black, offset = shadowOffSet, blurRadius = 2f)
                             )
                         )
                     }
-                    var paddingBottom = 8.dp
+                    var paddingBottom = 5.dp
                     if (profesionCrop.length <= 35){
-                        paddingBottom = 20.dp
+                        paddingBottom = 25.dp
                     }
                     
                     Text(
@@ -134,7 +142,7 @@ class Recuadros {
                         fontFamily = FontFamily(Font(R.font.afacad)),
                         color = Color.White,
                         style = TextStyle(
-                            fontSize = 10.sp,
+                            fontSize = profesionSize,
                             shadow = Shadow(color = Color.Black, offset = shadowOffSet2, blurRadius = 2f)
                         ),
                         modifier = Modifier
@@ -149,22 +157,33 @@ class Recuadros {
         }
     }
 
+    // Sin usar
 
     @Composable
-    fun CrearRectangulo(@DrawableRes imagen: Int, @StringRes nombre: Int, @StringRes apellido: Int, @StringRes profesion: Int, modifier: Modifier){
-        val profesionString = stringResource(profesion); val profesionCrop: String
-        if (profesionString.length >= 60){
-            profesionCrop = "${profesionString.substring(0,60)}..."
-        }else{
+    fun RectanguloLandscape(@DrawableRes imagen: Int, @StringRes nombre: Int, @StringRes apellido: Int, @StringRes profesion: Int) {
+        val profesionString = stringResource(profesion);
+        val profesionCrop: String
+        val width = 150.dp;
+        val height = 200.dp;
+        val nameSize = 23.sp;
+        val surnameSize = 25.sp;
+        val profesionSize = 18.sp
+        val characterCropAt = 15
+
+
+        if (profesionString.length >= characterCropAt) {
+            profesionCrop = "${profesionString.substring(0, characterCropAt)}..."
+        } else {
             profesionCrop = profesionString
         }
-        val shadowOffSet = Offset(2.0f, 3.0f); val shadowOffSet2 = Offset(1.0f, 2.0f)
+        val shadowOffSet = Offset(2.0f, 3.0f);
+        val shadowOffSet2 = Offset(1.0f, 2.0f)
         Surface(
             shape = MaterialTheme.shapes.medium,
             color = MaterialTheme.colorScheme.primaryContainer,
-            modifier = modifier
-                .width(250.dp)
-                .height(100.dp)
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(height)
 
         ) {
             Box {
@@ -181,57 +200,74 @@ class Recuadros {
                     contentDescription = null,
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
-                        .height(60.dp)
+                        .height(height - 50.dp)
                 )
-                Column(verticalArrangement = Arrangement.Bottom,
+                Column(
+                    verticalArrangement = Arrangement.Bottom,
                     modifier = Modifier
                         .fillMaxSize()
-                        .padding(2.dp)) {
+                        .padding(2.dp)
+                ) {
 
-                    if (stringResource(apellido) !="N/A"){
+                    if (stringResource(apellido) != "N/A") {
                         Text(
                             text = stringResource(nombre),
                             fontFamily = FontFamily(Font(R.font.nlight)),
-                            color = MaterialTheme.colorScheme.onPrimary,
+                            color = Color.White,
                             style = TextStyle(
-                                fontSize = 15.sp,
-                                shadow = Shadow(color = Color.Black, offset = shadowOffSet, blurRadius = 2f)
+                                fontSize = nameSize,
+                                shadow = Shadow(
+                                    color = Color.Black,
+                                    offset = shadowOffSet,
+                                    blurRadius = 2f
+                                )
                             )
                         )
                         Spacer(modifier = Modifier.padding(horizontal = 3.dp))
                         Text(
                             text = stringResource(apellido),
                             fontFamily = FontFamily(Font(R.font.nheavy)),
-                            color = MaterialTheme.colorScheme.onPrimary,
+                            color = Color.White,
                             style = TextStyle(
-                                fontSize = 17.sp,
-                                shadow = Shadow(color = Color.Black, offset = shadowOffSet2, blurRadius = 2f)
+                                fontSize = surnameSize,
+                                shadow = Shadow(
+                                    color = Color.Black,
+                                    offset = shadowOffSet2,
+                                    blurRadius = 2f
+                                )
                             )
                         )
-                    }else{
+                    } else {
                         Text(
                             text = stringResource(nombre),
                             fontFamily = FontFamily(Font(R.font.nheavy)),
-                            color = MaterialTheme.colorScheme.onPrimary,
+                            color = Color.White,
                             style = TextStyle(
-                                fontSize = 17.sp,
-                                shadow = Shadow(color = Color.Black, offset = shadowOffSet, blurRadius = 2f)
+                                fontSize = nameSize,
+                                shadow = Shadow(
+                                    color = Color.Black,
+                                    offset = shadowOffSet,
+                                    blurRadius = 2f
+                                )
                             )
                         )
                     }
                     var paddingBottom = 8.dp
-                    if (profesionCrop.length <= 35){
+                    if (profesionCrop.length <= 35) {
                         paddingBottom = 20.dp
                     }
-
 
                     Text(
                         text = profesionCrop,
                         fontFamily = FontFamily(Font(R.font.afacad)),
-                        color = MaterialTheme.colorScheme.onPrimary,
+                        color = Color.White,
                         style = TextStyle(
-                            fontSize = 10.sp,
-                            shadow = Shadow(color = Color.Black, offset = shadowOffSet2, blurRadius = 2f)
+                            fontSize = profesionSize,
+                            shadow = Shadow(
+                                color = Color.Black,
+                                offset = shadowOffSet2,
+                                blurRadius = 2f
+                            )
                         ),
                         modifier = Modifier
                             .paddingFromBaseline(10.dp)
