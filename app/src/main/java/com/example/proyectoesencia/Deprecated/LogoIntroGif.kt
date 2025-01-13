@@ -1,9 +1,4 @@
-package com.example.proyectoesencia.Screens.ScreensAssets
-
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.platform.LocalContext
-import com.android.volley.toolbox.ImageLoader
-import java.lang.reflect.Modifier
+package com.example.proyectoesencia.Deprecated
 
 class LogoIntroGif {
 

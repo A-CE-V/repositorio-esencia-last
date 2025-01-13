@@ -1,4 +1,4 @@
-package com.example.proyectoesencia.Screens.ScreensAssets
+package com.example.proyectoesencia.Screens.MainScreen.ScreensAssets
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search

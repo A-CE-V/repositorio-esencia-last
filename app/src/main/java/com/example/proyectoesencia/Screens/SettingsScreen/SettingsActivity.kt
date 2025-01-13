@@ -1,4 +1,4 @@
-package com.example.proyectoesencia.Screens
+package com.example.proyectoesencia.Screens.SettingsScreen
 
 
 import androidx.compose.foundation.layout.*

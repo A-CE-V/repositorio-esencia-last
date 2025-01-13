@@ -1,9 +1,5 @@
-package com.example.proyectoesencia.Screens
+package com.example.proyectoesencia.Screens.FirstScreen
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -24,7 +20,6 @@ import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
@@ -33,9 +28,6 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.compose.ProyectoESENCIATheme
-import com.example.compose.onTertiaryContainerLight
-import com.example.compose.onTertiaryLight
-import com.example.compose.tertiaryContainerLight
 import com.example.compose.tertiaryLight
 import com.example.proyectoesencia.R
 
@@ -133,6 +125,8 @@ fun PantallaBienvenida(navController: NavController,modifier: Modifier){
 
 
 }
+
+
 //Muestra el preview de la pantalla de bienvenida
 
 @Preview(showBackground = true, widthDp = 320, heightDp = 320)

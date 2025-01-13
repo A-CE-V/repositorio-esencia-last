@@ -1,4 +1,4 @@
-package com.example.proyectoesencia.Screens.ScreensAssets
+package com.example.proyectoesencia.Screens.MainScreen.ScreensAssets
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes

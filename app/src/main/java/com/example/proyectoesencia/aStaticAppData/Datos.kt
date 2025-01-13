@@ -1,4 +1,4 @@
-package com.example.proyectoesencia.Screens.entity.model
+package com.example.proyectoesencia.aStaticAppData
 
 import com.example.proyectoesencia.R
 
@@ -32,7 +32,6 @@ class Datos{
 }
 
 /*
-
 PRÓXIMAMENTE
 
 
