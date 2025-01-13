@@ -1,6 +1,13 @@
 
 
-                Versión Actual: 1.1.0 - SNAPSHOT
+                Versión Actual: 1.2.0 - SNAPSHOT
+
+# NOVEDADES v.1.2.0:
+
+* Creación de una clase encargada de la navegación
+* Creación de una sealed class para las rutas de navegación
+* Creación de diversas carpetas para segmentar el código y ordenarlo
+* Diversas refactorizaciones varias para aumentar la simpleza a la hora de picar código
                 
   NOVEDADES v.1.1.0:
 
