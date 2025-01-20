@@ -1,4 +1,4 @@
-package com.example.proyectoesencia.Screens.MainScreen
+package com.example.proyectoesencia.Screens.mainScreen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
@@ -18,17 +18,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.example.proyectoesencia.Screens.MainScreen.ScreensAssets.Recuadros
-import com.example.proyectoesencia.aStaticAppData.Datos
 import com.example.compose.surfaceLight
-import com.example.proyectoesencia.Screens.MainScreen.ScreensAssets.Toolbar
+import com.example.proyectoesencia.Screens.mainScreen.assets.AppToolbar
+import com.example.proyectoesencia.Screens.mainScreen.assets.RectanguloLandscape
+import com.example.proyectoesencia.Screens.mainScreen.assets.RectanguloPortrait
+import com.example.proyectoesencia.aStaticAppData.listaData
 
 
 @Composable
 fun AppManagerPP(navController: NavController) {
     Scaffold(
-        topBar = { Toolbar().AppToolbar(navController) }
+
     ) { paddingValues ->
+        AppToolbar(navController)
         AppMainScreenManager(paddingValues)
     }
 }
@@ -49,7 +51,7 @@ fun AppMainScreenManager(paddingValues: PaddingValues) {
 
 @Composable
 fun MostrarCuadriculaReCuadros(paddingValues: PaddingValues) {
-    val listaMujeres = Datos().listaData
+    val listaMujeres = listaData
     LazyColumn(
         contentPadding = PaddingValues(horizontal = 16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -57,7 +59,7 @@ fun MostrarCuadriculaReCuadros(paddingValues: PaddingValues) {
         modifier = Modifier.padding(paddingValues)
     ) {
         items(listaMujeres){ lista ->
-            Recuadros().RectanguloPortrait(lista.imagenPortada,lista.nombre,lista.apellido,lista.profesion)
+            RectanguloPortrait(lista.imagenPortada,lista.nombre,lista.apellido,lista.profesion)
         }
     }
 
@@ -68,7 +70,7 @@ fun MostrarCuadriculaReCuadros(paddingValues: PaddingValues) {
 // Sólo funcionará cuando se gire el dispositivo móvil
 @Composable
 fun MostrarColumnaRectangulos(modifier: Modifier){
-    val listaMujeres = Datos().listaData
+    val listaMujeres = listaData
     Surface(modifier = Modifier.fillMaxSize()) {
 
         LazyVerticalGrid(
@@ -76,7 +78,7 @@ fun MostrarColumnaRectangulos(modifier: Modifier){
             horizontalArrangement = Arrangement.spacedBy(16.dp), verticalArrangement = Arrangement.spacedBy(16.dp),
             modifier = modifier.fillMaxHeight()) {
             items(listaMujeres){ lista ->
-                Recuadros().RectanguloLandscape(lista.imagenPortada,lista.nombre,lista.apellido,lista.profesion)
+                RectanguloLandscape(lista.imagenPortada,lista.nombre,lista.apellido,lista.profesion)
             }
         }
 
@@ -101,3 +103,4 @@ fun MostrarColumnaRectangulos(modifier: Modifier){
 fun ColumnaPreview(){
     MostrarColumnaRectangulos(modifier = Modifier)
 }
+
