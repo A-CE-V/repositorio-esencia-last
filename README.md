@@ -1,8 +1,17 @@
 
 
-`# Versión Actual: 1.2.0 - SNAPSHOT`
+`# Versión Actual: 1.2.2 - SNAPSHOT`
 
-!["LOGO STEM BOOK HORIZONTAL"](https://i.imgur.com/Kv9ughb.png)
+!["LOGO STEM BOOK HORIZONTAL"](https://i.imgur.com/42Nkbre.png)
+
+# NOVEDADES v.1.2.2 > ¡¡¡¡ NO ESTABLE !!!!
+
+* Modificación del logo de la aplicación
+* Modificación del README de la aplicación
+* Diversas modificaciones varias
+* Versión a mitad de desarrollo, cosas sin finalizar
+
+
 
 # NOVEDADES v.1.2.0:
 
