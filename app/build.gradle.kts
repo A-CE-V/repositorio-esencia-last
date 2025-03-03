@@ -1,6 +1,13 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    /**
+     *  Dependencias añadidas a raíz de la implementación del ROOM
+     *  Adrián Castillo Vega - 28/02/2025
+     *
+     */
+    id("com.google.devtools.ksp") version "2.1.0-1.0.29"
+    id("org.jetbrains.kotlin.plugin.compose")
 }
 
 android {
@@ -33,6 +40,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -51,8 +59,42 @@ android {
 
 dependencies {
     implementation(libs.volley)
-    val nav_version = "2.8.4"
-    implementation("androidx.navigation:navigation-compose:$nav_version")
+
+    /**
+     *         03/03/2025 - Adrián Castillo Vega
+     *         Más dependencias; Añadidas para mejorar los visuales de la
+     *         aplicación:
+     *
+     */
+    implementation(libs.animated.navigation.bar)
+    implementation (libs.bottombar)
+    implementation (libs.composeloading)
+
+
+    /**
+     *          28/02/2025 - Adrián Castillo Vega
+     *
+     *          Nuevas dependencias.
+     *          Añadidas después para el funcionamiento del ROOM
+     *
+     *
+     */
+
+    implementation(platform(libs.androidx.compose.bom.v20250200))
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.material3)
+    implementation(libs.ui)
+    implementation(libs.ui.graphics)
+    implementation(libs.ui.tooling.preview)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.room.runtime)
+    ksp("androidx.room:room-compiler:${rootProject.extra["room_version"]}")
+
+
+    implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -64,6 +106,8 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
+
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

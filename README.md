@@ -1,8 +1,18 @@
 
 
-`# Versión Actual: 1.2.5 - SNAPSHOT`
+`# Versión Actual: 1.3.0 - SNAPSHOT`
 
 !["LOGO STEM BOOK HORIZONTAL"](https://i.imgur.com/Jj1sCt6.png)
+
+# NOVEDADES v1.3.0 > 
+
+* El ROOM fue añadido e implementado perfectamente
+* La pantalla principal fue mejorada radicalmente
+* Muchas partes del proyecto fueron cambiados
+* La barra principal fue cambiada
+* Se añadieron iconos de carga personalizados
+* Se añadieron múltiples dependencias para la correcta implemententación del proyecto
+
 
 # NOVEDADES v1.2.5 > ¡¡¡¡ NO ESTABLE !!!!
 

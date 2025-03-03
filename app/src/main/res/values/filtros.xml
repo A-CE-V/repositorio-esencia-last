@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="filter_fisicas">Físicas</string>
+    <string name="filter_quimicas">Químicas</string>
+    <string name="filter_biologas">Biólogas</string>
+    <string name="filter_investigadora">Investigadora</string>
+    <string name="filter_profesoras">Profesoras</string>
+</resources>
