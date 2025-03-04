@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Citas Elegidos por Daniel   -->
+    <string name="c_margarita">Lo importante es no tener arrugas en el cerebro</string>
+    <string name="c_alicia" ></string>
+    <string name="c_rosa"></string>
+    <string name="c_montserrat"></string>
+    <string name="c_maria">Solo nos acordamos de la ciencia en las enfermedades para las que aún no hay tratamiento</string>
+
+    <!--  Citas Elegidos por Salvador   -->
+    <string name="c_marie">La mejor vida no es la más larga, sino la más rica en buenas acciones.</string>
+    <string name="c_barbara">La vida es una constante exploración. Atrévete a adentrarte en lo desconocido y descubrirás cosas asombrosas.</string>
+    <string name="c_elizabeth">Fortalezca su mente en cualquier momento y lugar.</string>
+    <string name="c_rosalind">La ciencia y la vida cotidiana no pueden y no deben ser separados</string>
+    <string name="c_caroline">Su logro más destacado en este campo fue el descubrimiento del cometa C/1786 P1 (cometa de Herschel) en 1786</string>
+
+    <!--  Citas Elegidos por Yaris   -->
+    <string name="c_aspasia">Es decir, quieres ser el esposo de la mejor de las esposas, y que ella quiera casarse con el hombre más ejemplar</string>
+    <string name="c_mary">El mundo me ha tratado tan mal que temo que me ha hecho desconfiar de todos</string>
+    <string name="c_ada">Cuanto más estudio, más insaciable siento mi genio por ello</string>
+    <string name="c_nettie">Esto parece ser un claro caso de determinación del sexo por una diferencia definida en el carácter de los elementos de un par de cromosomas</string>
+    <string name="c_lise">Esto parece ser un claro caso de determinación del sexo por una diferencia definida en el carácter de los elementos de un par de cromosomas</string>
+
+    <!--  Citas Elegidos por Adrián   -->
+    <string name="c_maria_juana">Su fin, en esta Obrilla, sólo es facilitar esta instrucción a muchos, que no pueden lograrla de otro modo</string>
+    <string name="c_blanca">Blanca de Catalán de Ocón, joven ilustre, recientemente ha remitido al autor Willkomm plantas recogidas por sí misma, en Aragón Austral cerca del Valle de Valdecabriel</string>
+    <string name="c_valentina">Una vez que has estado en el espacio, aprecias cuán pequeña y frágil es la Tierra</string>
+    <string name="c_hipatia">Defiende tu derecho a pensar, porque incluso pensar de manera errónea es mejor que no pensar</string>
+    <string name="c_sofia">Es imposible ser matemático sin ser un poeta del alma</string>
+
+</resources>

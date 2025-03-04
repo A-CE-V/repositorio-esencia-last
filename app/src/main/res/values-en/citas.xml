@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Citas Elegidos por Daniel   -->
+    <string name="c_margarita">The most important thing is to keep your mind sharp</string>
+    <string name="c_alicia" ></string>
+    <string name="c_rosa"> </string>
+    <string name="c_montserrat">  </string>
+    <string name="c_maria"></string>
+
+    <!--  Citas Elegidos por Salvador   -->
+    <string name="c_marie">A good life isn\'t about how long you live, but how much good you do.</string>
+    <string name="c_barbara">Life is a constant exploration. Dare to venture into the unknown and you will discover amazing things.</string>
+    <string name="c_elizabeth">Strengthen your mind anytime, anywhere.</string>
+    <string name="c_rosalind">Science and everyday life cannot and should not be separated.</string>
+    <string name="c_caroline">A major achievement in this field was the discovery of comet C/1786 P1 (Herschel\'s comet) in 1786.</string>
+
+    <!--  Citas Elegidos por Yaris   -->
+    <string name="c_aspasia">That is, you want to be the husband of the best of wives, and you want her to want to marry the most exemplary man.</string>
+    <string name="c_mary">The world has treated me so badly that I fear it has made me distrustful of everyone.</string>
+    <string name="c_ada">The more I study, the more insatiable I feel my genius for it.</string>
+    <string name="c_nettie">Esto parece ser un claro caso de determinación del sexo por una diferencia definida en el carácter de los elementos de un par de cromosomas</string>
+    <string name="c_lise">Life need not be easy, provided only that it is not empty</string>
+
+    <!--  Citas Elegidos por Adrián   -->
+    <string name="c_maria_juana">Its purpose, in this Obrilla, is only to facilitate this instruction to many, who cannot achieve it in any other way.</string>
+    <string name="c_blanca">Blanca de Catalán de Ocón, an illustrious young woman, recently sent the author Willkomm plants she had collected herself in Southern Aragón near the Valdecabriel Valley.</string>
+    <string name="c_valentina">Once you\'ve been in space, you appreciate how small and fragile the Earth is.</string>
+    <string name="c_hipatia">Defend your right to think, because even thinking wrongly is better than not thinking at all.</string>
+   <string name="c_sofia">It is impossible to be a mathematician without being a poet of the soul.</string>
+
+    </resources>
