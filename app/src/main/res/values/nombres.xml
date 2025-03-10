@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Nombres Elegidos por Daniel   -->
+    <string name="alicia" translatable="false">Alicia</string>
+    <string name="rosa" translatable="false" >Rosa</string>
+    <string name="montserrat" translatable="false">Montserrat</string>
+    <string name="maria" translatable="false">Maria</string>
+    <string name="margarita" translatable="false">Margarita</string>
+
+    <!--  Nombres Elegidos por Salvador   -->
+    <string name="marie" translatable="false">Marie</string>
+    <string name="barbara" translatable="false">Barbara</string>
+    <string name="elizabeth" translatable="false">Elizabeth</string>
+    <string name="rosalind" translatable="false">Rosalind</string>
+    <string name="caroline" translatable="false">Carolina</string>
+
+    <!--  Nombres Elegidos por Yaris   -->
+    <string name="aspasia" translatable="false">Aspasia</string>
+    <string name="mary" translatable="false">Mary</string>
+    <string name="ada" translatable="false">Ada</string>
+    <string name="nettie" translatable="false">Nettie</string>
+    <string name="lise" translatable="false">Lise</string>
+
+    <!--  Nombres Elegidos por Adrián   -->
+    <string name="maria_juana" translatable="false">María J</string>
+    <string name="blanca" translatable="false">Blanca</string>
+    <string name="valentina" translatable="false">Valentina</string>
+    <string name="hipatia" translatable="false">Hipatía</string>
+    <string name="sofia" translatable="false">Sofia</string>
+
+
+</resources>

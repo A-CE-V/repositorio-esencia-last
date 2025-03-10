@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">STEM BOOK</string>
+
+    <string name="text_bienvenida">The application where you can find the biographies of some of the most famous women in contemporary history, press the button to start.</string>
+    <string name="btn_bienvendia_text">Tap the button to start</string>
+</resources>
