@@ -34,6 +34,11 @@ import androidx.compose.material3.MaterialTheme.shapes
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.blur
@@ -56,8 +61,10 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.ViewModel
 import com.example.compose.ProyectoESENCIATheme
 import com.example.proyectoesencia.R
+import com.example.proyectoesencia.ui.screens.mainScreen.PantallaPrincipalVM
 import com.example.proyectoesencia.ui.screens.mainScreen.assets.tools.calculatePadding
 import com.example.proyectoesencia.ui.screens.mainScreen.assets.tools.cropTheTextAt
 import com.example.proyectoesencia.ui.screens.mainScreen.assets.tools.findImageByName
@@ -75,7 +82,7 @@ fun NamesPreview(){
 
 
 @Composable
-fun RectanguloPortrait(nombre: String, apellido: String, profesion: String, onClicked: () -> Unit){
+fun RectanguloPortrait(id: Int, nombre: String, apellido: String, profesion: String, onClicked: () -> Unit, viewModel: PantallaPrincipalVM){
     //val width = 180.dp
     val imagen = findImageByName(nombre, apellido)
     val height = 290.dp; val nameSize = 28.sp; val surnameSize = 30.sp; val profesionSize = 20.sp
@@ -83,6 +90,8 @@ fun RectanguloPortrait(nombre: String, apellido: String, profesion: String, onCl
     val shape = shapes.extraLarge
     val profesionCrop = cropTheTextAt(profesion, characterCropAt); val paddingBottom = calculatePadding(profesionCrop)
     val shadowOffSet = Offset(2.0f, 3.0f); val shadowOffSet2 = Offset(1.0f, 2.0f)
+    val meGusta by viewModel.getMeGustaFlow(id).collectAsState(initial = 0)
+
     Surface(
         shape = shape,
         border = BorderStroke(5.dp, Brush.linearGradient(gradiente.shuffled())),
@@ -92,7 +101,7 @@ fun RectanguloPortrait(nombre: String, apellido: String, profesion: String, onCl
             .fillMaxWidth()
             .height(height)
             .padding(horizontal = 10.dp, vertical = 5.dp)
-            .clickable { onClicked()  }
+            .clickable { onClicked() }
     ) {
         Box(modifier = Modifier.fillMaxSize()){
             Image(
@@ -100,7 +109,8 @@ fun RectanguloPortrait(nombre: String, apellido: String, profesion: String, onCl
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
-                    .blur(40.dp).fillMaxHeight()
+                    .blur(40.dp)
+                    .fillMaxHeight()
             )
             Image(
                 painter = painterResource(imagen),
@@ -109,8 +119,16 @@ fun RectanguloPortrait(nombre: String, apellido: String, profesion: String, onCl
                 modifier = Modifier
                     .height(height-85.dp)
             )
-            FavButton(Icons.Default.FavoriteBorder, modifier = Modifier.align(Alignment.BottomEnd).padding(bottom = 30.dp, end = 20.dp)) { }
-            Column(verticalArrangement = Arrangement.Bottom, modifier = Modifier.fillMaxSize().padding(10.dp)) {
+            FavButton(
+                Icon = if (meGusta == 1) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
+                modifier = Modifier
+                    .align(Alignment.BottomEnd)
+                    .padding(bottom = 30.dp, end = 20.dp),
+                onClickFunction = { viewModel.meGusta(id) }
+            )
+            Column(verticalArrangement = Arrangement.Bottom, modifier = Modifier
+                    .fillMaxSize()
+                    .padding(10.dp)) {
 
                 InformacionCientificaTexts(nombre, apellido, nameSize, shadowOffSet, surnameSize, shadowOffSet2)
                 ProfesionText(profesionCrop, profesionSize, shadowOffSet2, paddingBottom)
@@ -118,9 +136,6 @@ fun RectanguloPortrait(nombre: String, apellido: String, profesion: String, onCl
             }
         }
     }
-
-
-
 }
 
 @Composable
@@ -173,7 +188,8 @@ fun ProfesionText(profesionCrop: String, profesionSize: TextUnit, shadowOffSet2:
             shadow = Shadow(color = Color.Black, offset = shadowOffSet2, blurRadius = 2f)
         ),
         modifier = Modifier
-            .paddingFromBaseline(10.dp).fillMaxWidth()
+            .paddingFromBaseline(10.dp)
+            .fillMaxWidth()
             .padding(start = 10.dp, end = 60.dp, bottom = paddingBottom)
     )
 }
@@ -214,7 +230,9 @@ fun NoneFilter(curentFilter: String, onClickFunction: () -> Unit) {
     IconButton(
         onClick = { onClickFunction() },
         enabled = true,
-        modifier = Modifier.size(tamanio).clip(CircleShape),
+        modifier = Modifier
+            .size(tamanio)
+            .clip(CircleShape),
         colors = IconButtonDefaults.iconButtonColors(
             contentColor = colorScheme.onPrimaryContainer,
             containerColor = getTheContainerColor("",curentFilter)

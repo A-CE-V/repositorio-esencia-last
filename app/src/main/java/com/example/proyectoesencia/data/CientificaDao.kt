@@ -18,7 +18,7 @@ interface CientificaDao{
     @Query(
         """
         SELECT * FROM cientificas 
-        ORDER BY nombre ASC    
+        ORDER BY nombre ASC   
         """
     )
     fun getAll(): Flow<List<CientificaSchedule>>
@@ -32,4 +32,18 @@ interface CientificaDao{
     )
     fun getCientificaById(id: Int): Flow<List<CientificaSchedule>>
 
+    @Query("SELECT me_gusta FROM cientificas WHERE id = :id")
+    fun getMeGusta(id: Int): Int
+
+    @Query("SELECT me_gusta FROM cientificas WHERE id = :id")
+    fun getMeGustaFlow(id: Int): Flow<Int>
+
+    @Query("UPDATE cientificas SET me_gusta = 1 WHERE id = :id")
+    suspend fun updateMeGusta(id: Int)
+
+    @Query("UPDATE cientificas SET me_gusta = 0 WHERE id = :id")
+    suspend fun removeMeGusta(id: Int)
+
+    @Query("SELECT * FROM cientificas WHERE me_gusta = 1")
+    fun getMeGustaLista(): Flow<List<CientificaSchedule>>
 }

@@ -2,9 +2,11 @@ package com.example.pruebasesencia
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Build
+import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.sharp.FavoriteBorder
 import androidx.compose.material.icons.sharp.Home
 import androidx.compose.material.icons.sharp.Menu
 import androidx.compose.material.icons.sharp.Person
@@ -50,7 +52,7 @@ fun BottomBar(navController: NavController) {
                         contentDescription = null
                     )
                 },
-                label = { Text("Perfil") }, // Hard Code
+                label = { Text("Me Gusta") }, // Hard Code
                 selected = comprobarDestino(navController = navController, RutasSealed.ProfileScreen.ruta),
                 onClick = {navController.navigate(RutasSealed.ProfileScreen.ruta)}
             )
@@ -75,7 +77,7 @@ fun BottomBar(navController: NavController) {
 fun borderOrFilledIcon(current: Int, navController: NavController, ruta: String): ImageVector{
     return when(current){
         1 -> if (comprobarDestino(navController, ruta)){Icons.Default.Home}else{Icons.Sharp.Home}
-        2 -> if (comprobarDestino(navController, ruta)){Icons.Default.Person}else{Icons.Sharp.Person}
+        2 -> if (comprobarDestino(navController, ruta)){Icons.Default.FavoriteBorder}else{Icons.Sharp.FavoriteBorder}
         3 -> if (comprobarDestino(navController, ruta)){Icons.Default.Menu}else{ Icons.Sharp.Menu}
         else -> Icons.Default.Build
     }

@@ -12,6 +12,7 @@ import com.example.proyectoesencia.ui.screens.firstScreen.AppManagerMainScreenBu
 import com.example.proyectoesencia.ui.screens.mainScreen.AppManagerPP
 import com.example.proyectoesencia.ui.screens.mainScreen.PantallaPrincipalVM
 import com.example.proyectoesencia.ui.screens.mainScreen.detalilScreen.DetalleCientificaScreen
+import com.example.proyectoesencia.ui.screens.profileScreen.ProfileScreen
 import com.example.proyectoesencia.ui.screens.settingsScreen.SettingsScreen
 
 @Composable
@@ -43,6 +44,9 @@ fun NavigationManager(
         }
         composable(RutasSealed.SettingsScreen.ruta) {
             SettingsScreen(onBack = { navController.popBackStack() })
+        }
+        composable(RutasSealed.ProfileScreen.ruta) {
+            ProfileScreen(navController, pantallaPrincipalVM)
         }
 
     }

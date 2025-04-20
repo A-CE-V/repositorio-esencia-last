@@ -1,18 +1,23 @@
 package com.example.proyectoesencia.ui.screens.mainScreen
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory.Companion.APPLICATION_KEY
+import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.proyectoesencia.CientificasScheduleApplication
 import com.example.proyectoesencia.data.CientificaDao
 import com.example.proyectoesencia.data.CientificaSchedule
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class PantallaPrincipalVM(private val cientificaDao: CientificaDao) : ViewModel(){
 
@@ -42,6 +47,13 @@ class PantallaPrincipalVM(private val cientificaDao: CientificaDao) : ViewModel(
 
      */
 
+    fun getScheduleMeGusta(): Flow<List<CientificaSchedule>> = cientificaDao.getMeGustaLista()
+
+    fun getMeGustaFlow(id: Int): Flow<Int> {
+        return cientificaDao.getMeGustaFlow(id)
+    }
+
+
     fun updateState(id: Int){
         _cientificasState.update{ nuevoValor ->
             nuevoValor.copy(
@@ -57,6 +69,20 @@ class PantallaPrincipalVM(private val cientificaDao: CientificaDao) : ViewModel(
             )
         }
     }
+
+    fun meGusta(id: Int) {
+        viewModelScope.launch(Dispatchers.IO) {
+            val megusta = cientificaDao.getMeGusta(id)
+            if (megusta == 1) {
+                Log.e("Gusta", "No MeGusta")
+                cientificaDao.removeMeGusta(id)
+            } else {
+                Log.e("Gusta", "MeGusta")
+                cientificaDao.updateMeGusta(id)
+            }
+        }
+    }
+
 
 
     companion object {

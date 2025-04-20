@@ -1,8 +1,10 @@
 package com.example.proyectoesencia
 
 import android.os.Bundle
+import android.view.View
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.core.view.WindowCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
@@ -12,6 +14,7 @@ import com.example.proyectoesencia.navigationManagers.NavigationManager
 import com.example.proyectoesencia.navigationManagers.RutasSealed
 import com.example.proyectoesencia.ui.screens.mainScreen.PantallaPrincipalVM
 
+@Suppress("DEPRECATION")
 class MainActivity: ComponentActivity() {
     private lateinit var navController: NavController
     /*
@@ -22,6 +25,12 @@ class MainActivity: ComponentActivity() {
      */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        window.decorView.systemUiVisibility = (
+                View.SYSTEM_UI_FLAG_FULLSCREEN
+                        or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                )
+        WindowCompat.setDecorFitsSystemWindows(window, false)
         setContent {
             ProyectoESENCIATheme {
                 // Implementa la navegación

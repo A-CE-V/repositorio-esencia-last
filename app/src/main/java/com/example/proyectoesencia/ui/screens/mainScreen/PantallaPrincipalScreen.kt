@@ -25,6 +25,7 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.compose.surfaceLight
 import com.example.proyectoesencia.data.CientificaSchedule
@@ -41,7 +42,8 @@ import com.example.pruebasesencia.BottomBar
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AppManagerPP(navController: NavController, viewModel: PantallaPrincipalVM) {
-    val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior(); val tablaCompleta by viewModel.getFullSchedule().collectAsState(emptyList())
+    val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior();
+    val tablaCompleta by viewModel.getFullSchedule().collectAsState(emptyList())
     val estado = viewModel.cientificasState.collectAsState()
 
 
@@ -53,33 +55,39 @@ fun AppManagerPP(navController: NavController, viewModel: PantallaPrincipalVM) {
             topBar = { TopBar(navController, scrollBehavior = scrollBehavior) },
             bottomBar = { BottomBar(navController)}
         ) { paddingValues ->
-            AppMainScreenManager(paddingValues, navController, tablaCompleta, viewModel::updateState, viewModel::updateSelectedFilter, estado.value.filter)
+            AppMainScreenManager(paddingValues, navController, tablaCompleta, viewModel::updateState, viewModel::updateSelectedFilter, estado.value.filter, viewModel)
         }
     }
-
 }
 
 
 @Composable
-fun AppMainScreenManager(paddingValues: PaddingValues, navController: NavController, schedule: List<CientificaSchedule>, updateID: (Int) -> Unit, updateFilter: (String) -> Unit, currentFilter: String) {
+fun AppMainScreenManager(paddingValues: PaddingValues, navController: NavController, schedule: List<CientificaSchedule>, updateID: (Int) -> Unit, updateFilter: (String) -> Unit, currentFilter: String, viewModel: PantallaPrincipalVM) {
     Column(
         Modifier.fillMaxSize().padding(paddingValues)
     ){
         MostrarRowFiltros(currentFilter, updateFilter)
-        MostrarColumnaMain(paddingValues, navController, schedule, updateID, currentFilter)
+        MostrarColumnaMain(paddingValues, navController, schedule, updateID, currentFilter, viewModel)
     }
 }
 
 
 @Composable
-fun MostrarColumnaMain(paddingValues: PaddingValues, navController: NavController, schedule: List<CientificaSchedule>, updateID: (Int) -> Unit, currentFilter: String){
+fun MostrarColumnaMain(paddingValues: PaddingValues, navController: NavController, schedule: List<CientificaSchedule>, updateID: (Int) -> Unit, currentFilter: String, viewModel: PantallaPrincipalVM){
     Column(Modifier.verticalScroll(rememberScrollState())) {
-        schedule.forEach{ item->
+        schedule.forEach { item ->
             if (item.profesiones.lowercase().contains(currentFilter.lowercase())) {
-                RectanguloPortrait(item.nombre, item.apellidos, item.profesiones) {
-                    updateID(item.id)
-                    navController.navigate(RutasSealed.DetailScreen.ruta)
-                }
+                RectanguloPortrait(
+                    item.id,
+                    item.nombre,
+                    item.apellidos,
+                    item.profesiones,
+                    onClicked = {
+                        updateID(item.id)
+                        navController.navigate(RutasSealed.DetailScreen.ruta)
+                    },
+                    viewModel = viewModel
+                )
             }
         }
     }

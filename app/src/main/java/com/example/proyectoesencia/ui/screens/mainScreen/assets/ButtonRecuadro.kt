@@ -18,12 +18,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 
 @Composable
-fun FavButton(Icon: ImageVector, modifier: Modifier,onClickFunction: () -> Unit){
+fun FavButton(Icon: ImageVector, modifier: Modifier, onClickFunction: () -> Unit) {
     val tamanio = 60.dp
     IconButton(
-        onClick = {onClickFunction()},
+        onClick = { onClickFunction() },
         enabled = true,
-        modifier = modifier.size(tamanio).clip(CircleShape).shadow(6.dp, shape = CircleShape, spotColor = Color.Black),
+        modifier = modifier
+            .size(tamanio)
+            .clip(CircleShape)
+            .shadow(6.dp, shape = CircleShape, spotColor = Color.Black),
         colors = IconButtonDefaults.iconButtonColors(
             containerColor = MaterialTheme.colorScheme.primaryContainer,
             contentColor = Color.White
@@ -32,7 +35,7 @@ fun FavButton(Icon: ImageVector, modifier: Modifier,onClickFunction: () -> Unit)
         Icon(
             imageVector = Icon,
             contentDescription = null,
-            modifier = Modifier.size(tamanio/2)
+            modifier = Modifier.size(tamanio / 2)
         )
     }
 }
