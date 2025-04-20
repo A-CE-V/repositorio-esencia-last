@@ -37,4 +37,7 @@ data class CientificaSchedule (
 
     @ColumnInfo(name = "biografia")
     val biografia: String,
+
+    @ColumnInfo(name = "me_gusta")
+    val me_gusta: Int
 )
